@@ -36,7 +36,7 @@ function domainsListToString(list) {
 
 function writeFileWithDomains(consoleMessage) {
   console.log(consoleMessage);
-  writeDomainsFileRecursive(`../open-domains/Domain-names_L${domainNameLength}.txt`, openDomainsString);
+  writeDomainsFileRecursive(`Domain-names_L${domainNameLength}.txt`, openDomainsString);
   process.exit(0);
 }
 
