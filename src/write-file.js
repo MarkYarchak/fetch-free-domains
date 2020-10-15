@@ -6,7 +6,9 @@ function writeDomainsFileRecursive(filename, content) {
   try {
     const writeDirectoryPath = path.resolve(__dirname, '../open-domains/');
     if (!fs.existsSync(writeDirectoryPath)) fs.mkdirSync(writeDirectoryPath);
-    fs.writeFileSync(path.resolve(writeDirectoryPath, filename), content, { encoding: 'utf8' });
+    const domainsFilePath = path.resolve(writeDirectoryPath, filename);
+    fs.writeFileSync(domainsFilePath, content, { encoding: 'utf8' });
+    console.log(`The new file was created by the path:\n${domainsFilePath}`);
   } catch (e) {
     console.log(e.message);
   }
